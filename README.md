@@ -9,12 +9,12 @@ A collection of write-ups for challenges solved during **VOID CTF 2026**. This r
 | **Steganography** | The Vault | 150 | [Read Write-up](./Steganography/The-Vault.md) |
 | **Web Exploitation** | Redacted | 200 | [Read Write-up](./Web%20Expoitation/Redacted.md) |
 | **OSINT** | Retreat | 250 | [Read Write-up](OSINT/Retreat.md) |
-| **Cryptography** | Last Key | 100 | [Read Write-up](Cryptography/Last-Key.md) |
-| **Reverse Engineering** | BlackIce | 200 | [Read Write-up](Reverse%20Engineering/BlackIce.md) |
-| **Miscllaneous.** | The Last Relay | 100 | [Read Write-up](Miscllaneous/The-Last-Relay.md) |
-| **Steganography** | Fractured Truth | 300 | [Read Write-up](Steganography/Fractured-Truth.md) |
-| **PWN** | Hangman | 93 | [Read Write-up](PWN/Hangman.md) |
-| **Sanity** | Welcome to the Void | 100 | [Read Write-up](Sanity/Welcome-to-the-Void.md) |
+| **Cryptography** | Last Key | 100 | [Read Write-up](./Cryptography/Last%20Key) |
+| **Reverse Engineering** | BlackIce | 200 | [Read Write-up](./Reverse%20Engineering/BlackIce) |
+| **Miscllaneous.** | The Last Relay | 100 | [Read Write-up](./Miscllaneous/The%20Last%20Relay.md) |
+| **Steganography** | Fractured Truth | 300 | [Read Write-up](./Steganography/Fractured-Truth.md) |
+| **PWN** | Hangman | 93 | [Read Write-up](./PWN/Hangman.md) |
+| **Sanity** | Welcome to the Void | 100 | [Read Write-up](./Sanity/Welcome-to-the-Void.md) |
 
 **Challenges documented:** 9  
 **Combined challenge value:** 1,493 points
