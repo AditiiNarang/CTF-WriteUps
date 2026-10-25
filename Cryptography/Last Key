@@ -1,0 +1,64 @@
+# Last Key (100 Points)
+
+**Category:** Crypto / Forensics  
+**Points:** 100  
+**Flag format:** `VOID{...}`
+
+## Challenge Description
+An encrypted recovery archive was found. Nobody knows who made it,
+what's inside, or why it exists. Good luck figuring out what went wrong.
+
+## Step 1: Inspecting the archive
+TODO: file name/format of the archive (zip, 7z, tar, custom format),
+and whether it was password-protected or encrypted outright.
+
+```bash
+file archive.ext
+```
+
+TODO: output of this command, and any header/metadata it revealed.
+
+## Step 2: Identifying the encryption
+TODO: what encryption scheme was in use (e.g. AES in some mode, a
+custom cipher, password-based KDF), and how it was identified
+(file headers, provided source code, binary analysis of a keygen).
+
+## Step 3: Looking for a weakness
+The flag text — "nested state reconstruction beats bruteforce" —
+suggests the archive's encryption relied on some kind of **internal
+state** (for example a PRNG, a counter-based keystream, or a stateful
+cipher) that was reused or predictable across nested layers, and that
+a straightforward bruteforce of the key space was not the intended
+(or feasible) approach.
+
+TODO: what the "nested state" actually was (e.g. seed reused across
+multiple encryption rounds, a linear congruential generator, a
+counter mode nonce reuse) and how it was identified.
+
+## Step 4: Reconstructing the state
+Instead of brute-forcing the key directly, the state driving the
+encryption was reconstructed from known/leaked information
+(plaintext headers, repeated patterns, or side information in the
+archive), which let the key/keystream be derived analytically.
+
+```python
+# TODO: actual reconstruction script
+```
+
+## Step 5: Decrypting the archive
+TODO: how the recovered state/key was used to decrypt the archive,
+and what was found inside once opened.
+
+## Flag
+```
+VOID{nested_state_reconstruction_beats_bruteforce}
+```
+
+## Key Takeaways
+- When a cipher or PRNG carries internal state across multiple uses,
+  reconstructing that state is often far faster than brute-forcing
+  the key space.
+- Look for places where "random" values are reused, predictable, or
+  derivable from other outputs — that's usually the intended weakness.
+- Archive/file headers and metadata can leak enough structure to turn
+  a bruteforce problem into an analytical one.

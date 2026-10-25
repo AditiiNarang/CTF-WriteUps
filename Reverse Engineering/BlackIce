@@ -1,0 +1,49 @@
+# BlackIce (200 Points)
+
+**Category:** Forensics / Incident Response  
+**Points:** 200  
+**Solves:** 59  
+**Flag format:** `VOID{...}`
+
+## Challenge Description
+An internal vault service has gone silent, leaving behind a handful of
+recovered artifacts and an incomplete incident log. Something in the
+system doesn't add up. Can you figure out what happened and uncover
+what remains hidden?
+
+## Step 1: Recon
+TODO: what files/artifacts were provided (logs, memory dump, vault
+export, etc.) and their formats.
+
+## Step 2: Reading the incident log
+TODO: what the incomplete log showed, and what gaps or inconsistencies
+stood out.
+
+## Step 3: Investigating the artifacts
+TODO: tools used to examine the artifacts (strings, hex editor,
+log parser, etc.) and what each one revealed.
+
+## Step 4: Finding what doesn't add up
+TODO: the specific inconsistency or hidden piece of evidence that led
+toward the flag (e.g. a counter, timestamp mismatch, missing entry).
+
+The flag text itself ("arx engines never forget a counter") suggests
+the key evidence was a **counter value** tracked by something called
+the ARX engine, which the incident log or an artifact didn't account
+for correctly.
+
+## Step 5: Recovering the flag
+TODO: exact steps that produced the flag from that evidence.
+
+## Flag
+```
+VOID{arx_engines_never_forget_a_counter}
+```
+
+## Key Takeaways
+- Incomplete logs often hide the real story in what's missing, not
+  just what's present.
+- Cross-check every artifact against the others instead of trusting
+  one source.
+- Pay attention to counters, sequence numbers, or state that should
+  be consistent across a system.
